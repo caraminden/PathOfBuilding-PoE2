@@ -22,6 +22,10 @@ local b_xor = bit.bxor
 
 common = { }
 
+-- Theory of Crafting's speculative features: code on a feature/<patch>/<slug> branch runs only inside `if SpecFeature("<slug>") then`; the caller sets SpecFeatures per run, and with every flag off this fork calculates exactly as upstream.
+SpecFeatures = SpecFeatures or { }
+function SpecFeature(slug) return SpecFeatures[slug] == true end
+
 -- External libraries
 common.curl = require("lcurl.safe")
 common.xml = require("xml")
