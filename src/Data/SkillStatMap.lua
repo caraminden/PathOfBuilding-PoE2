@@ -116,6 +116,11 @@ return function(mod, flag, skill)
 	skill("ChaosDot", nil),
 	div = 60,
 },
+-- Soul Extraction (speculative): its extra chaos damage per second against an enemy with Decay, read only under SpecFeature("soul-extraction").
+["soul_extraction_chaos_damage_to_deal_per_minute_against_decayed"] = {
+	skill("SoulExtractionDecayDot", nil),
+	div = 60,
+},
 ["base_physical_damage_to_deal_per_minute"] = {
 	skill("PhysicalDot", nil),
 	div = 60,

@@ -1699,6 +1699,9 @@ Huge sets the radius to 11.
 	{ var = "conditionEnemyCursed", type = "check", label = "Is the enemy Cursed?", ifEnemyCond = "Cursed", tooltip = "The enemy will automatically be considered to be Cursed if you have at least one curse enabled,\nbut you can use this option to force it if necessary.", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("Condition:Cursed", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
 	end },
+	{ var = "conditionEnemyDecayed", type = "check", label = "Is the enemy affected by Decay?", tooltip = "Decay is the Chaos damage over time Debuff Profane Decay (Decaying Hex) inflicts.\nSkills that consume Decay, such as Soul Extraction, check this.", apply = function(val, modList, enemyModList)
+		enemyModList:NewMod("Condition:Decayed", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
+	end },
 	{ var = "conditionEnemyDazed", type = "check", label = "Is the enemy Dazed?", tooltip ="Dazed enemies take 50% more stun buildup for 8 seconds.", apply = function(val, modList, enemyModList)
 		enemyModList:NewMod("Condition:Dazed", "FLAG", true, "Config", { type = "Condition", var = "Effective" })
 	end },
